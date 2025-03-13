@@ -1,26 +1,26 @@
 from utils import get_device, find_principal_stresses_3d, creat_image, create_filled_geom, create_weighted_stress_field
-# from torch.utils.data import random_split
-# from torch.utils.data import Dataset, DataLoader, random_split
-# import torch.optim as optim
+from torch.utils.data import random_split
+from torch.utils.data import Dataset, DataLoader, random_split
+import torch.optim as optim
 import time
-# import torch
+import torch
 import matplotlib.pyplot as plt
-# import torchvision
+import torchvision
 import numpy as np
-# import torch.nn as nn
+import torch.nn as nn
 import h5py
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 import os
-# from models import CNNDataset
+from models import CNNDataset
 from scipy.spatial import KDTree
-# from torch.utils.data import random_split
-# from sklearn.model_selection import train_test_split
-# from torch.optim.lr_scheduler import ReduceLROnPlateau
-# from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import random_split
+from sklearn.model_selection import train_test_split
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.utils.data import DataLoader, Dataset
 from scipy.spatial import cKDTree
-# from models5 import StressNet, StressConcentrationLoss
+from models5 import StressNet, StressConcentrationLoss
 import time
 device = get_device()
 project_dir = os.getcwd()
@@ -76,7 +76,7 @@ else:
         stress_tensor = torch.from_numpy(f['stress'][:])
     print('Tensors loaded from disk.')
 
-pause = input("Press enter to continue...")
+
 
 outscaler = MinMaxScaler(feature_range=(0, 1))
 stress_tensor_scaled = outscaler.fit_transform(stress_tensor.reshape(-1, 1)).reshape(stress_tensor.shape)
