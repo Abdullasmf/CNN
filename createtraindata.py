@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import h5py
 project_dir = os.getcwd()
+import numpy as np
 tensor_file = project_dir + '/TrainingData_whole+edge_refine_mesh.h5'
 def create_tensors():
     with h5py.File('edge_worst_PS_list_refine_mesh.h5', 'r') as hf:
