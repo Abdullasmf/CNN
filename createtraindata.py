@@ -1,4 +1,4 @@
-from utils import creat_image, create_filled_geom, create_weighted_stress_field
+from utils2 import creat_image, create_filled_geom, create_weighted_stress_field
 import time
 import pandas as pd
 import os
